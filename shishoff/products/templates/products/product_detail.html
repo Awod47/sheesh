@@ -2,15 +2,16 @@
 
 {% block content %}
 
-{% for product in productss %}
-<div class="card" style="width: 18rem; margin-top: 100px; margin-left: 30px">
+<!-- {% for product in prod_desc %} -->
+<div class="card" style="width: 18rem; margin-top: 150px">
   <img class="card-img-top" src="{{ product.Image }}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{ product.Title }}</h5>
     <p class="card-text">{{ product.Description }}</p>
     <p class="card-text">Price - {{ product.Price }}</p>
-    <a href="<int:id>" class="btn btn-primary">Buy Now</a>
+    <a href="#" class="btn btn-primary">Buy Now</a>
   </div>
 </div>
-{% endfor %}
+<!-- {% endfor %} -->
+
 {% endblock %}

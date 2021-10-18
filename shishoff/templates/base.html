@@ -1,65 +1,101 @@
 <!DOCTYPE html>
-<html>
- <head>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" >
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-   integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
-   integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHISH</title>
 
-   <link href= "C:/Users/Akshay Prakash/.spyder-py3/Projects/shish/shishoff/templates/style.css" rel= "stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
 
-   <title> SHISH | Official </title>
-   <link rel= 'icon' href = "https://raw.githubusercontent.com/aprakash7/shish/main/templates/favicon.ico?token=AMGD2EB44IWMXQEQK4KM2LTBE6XUE"
-   type= "image/x-icon" />
- </head>
-      <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="/">SHISH</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/products">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Collections</a>
-              </li>
-              <li class= "nav-item">
-                <a class= "nav-link" href= "#">Cart</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Settings</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/register">Register</a>
-                    <a class="dropdown-item" href="/login">Login</a>
-                    <a class="dropdown-item" href="/logout">Logout</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </nav>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-        {% block content %}
-        replace me
-        {% endblock %}
-      </body>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"> 
 
+</head>
+<body>
+<header>
+
+    <a href="/" class="logo"><i class="S"></i>SHISH</a>
+
+    <nav class="navbar">
+        <a class="active" href="/">home</a>
+        <a href="/">about</a>
+        <a href="/products">products</a>
+        <a href="/">review</a>
+        <a href="/">blog</a>
+        <a href="/register">Register</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="/" class="fas fa-heart"></a>
+        <a href="/" class="fas fa-shopping-cart"></a>
+    </div>
+
+</header>
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+{% block content %}
+
+{% endblock %}
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="/">india</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="/">home</a>
+            <a href="/">about</a>
+            <a href="/products">products</a>
+            <a href="/">review</a>
+            <a href="/">blog</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="/">+197388278260</a>
+            <a href="/">+632781627393</a>
+            <a href="/">aprakash@gmail.com</a>
+            <a href="/">bangalore, karnataka , india</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="/">facebook</a>
+            <a href="/">twitter</a>
+            <a href="/">instagram</a>
+            <a href="/">linkedin</a>
+        </div>
+
+    </div>
+
+    <div class="credit"> copyright @2021 by <span>SHISHters</span> </div>
+
+</section>
+
+<div class="loader-container">  
+    <img src="{% static 'medias/loading_screen.gif' %}" alt="https://images.app.goo.gl/vYKRW7oC7Y4ir2BP8">
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static '/js/loading_scr.js' %}"></script>
+
+</body>
 </html>
