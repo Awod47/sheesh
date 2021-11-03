@@ -12,4 +12,4 @@ def newsletter(request):
 	else:
 		form = NewsletterForm()
 
-	return render(request, "base.html, ", {"form": form})
+	return render(request, "newsletter/newsletter.html ", {"form": form})

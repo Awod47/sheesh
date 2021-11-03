@@ -48,6 +48,7 @@
         <a href="/">review</a>
         <a href="/">blog</a>
         <a href="/register">Register</a>
+        <a href="/newsletter">Newsletter</a>
     </nav>
 
     <div class="icons">
@@ -68,15 +69,8 @@
 
 {% endblock %}
 
-<h1 style="margin-top: 140px; margin-left: 20px">Subscribe to our Newsletter!</h1>       <!--rendering -->
-<form method= "POST" class= "form-group" style="margin-top: 40px; margin-left: 20px">   
-    {% csrf_token %}
-    {{ form|crispy }}                                                                   <!--not rendering -->
-    <button type= "submit" class= "btn btn-success">Subscribe</button>                  <!--rendering -->
-</form> 
 
-
-<section class="footer" style="background: #BDBDBD; position: fixed; bottom:0 ; width: 100%;">
+<section class="footer" style="background: #BDBDBD; position: relative; bottom:0 ; width: 100%;">
 
     <div class="box-container">
 
@@ -112,7 +106,12 @@
 
     </div>
 
+    <div class= "newsletter">
+        <a class="newsletter-link" href="/newsletter"  style="font-size: 2.7rem;"> Subscribe to our Newsletter!</a>
+    </div>
+
     <div class="credit"> copyright @2021 by <span>SHISHters</span> </div>
+
 
 </section>
 
