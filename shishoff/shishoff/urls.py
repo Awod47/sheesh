@@ -26,7 +26,7 @@ urlpatterns = [
     path('', include('updates.urls')),
     path('', include('products.urls')),
     path('', include("django.contrib.auth.urls")),
-    path('', n.newsletter, name = "base" ),
+    path('newsletter/', n.newsletter, name = "newsletter" ),
 ]
 
 if settings.DEBUG: 

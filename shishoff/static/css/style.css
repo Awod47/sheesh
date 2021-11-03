@@ -237,3 +237,17 @@ header .icons #menu-bars{
     top:-110%;
     opacity:0;
 }
+
+.newsletter{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-link{
+    color:var(--black);
+}
+
+.newsletter-link:hover{
+    color:var(--green);
+}
