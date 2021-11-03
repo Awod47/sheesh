@@ -18,13 +18,15 @@ from django.urls import path, include
 from register import views as v
 from django.conf import settings 
 from django.conf.urls.static import static 
+from newsletter import views as n 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', v.register, name= "register" ), #v.func
     path('', include('updates.urls')),
     path('', include('products.urls')),
-    path('', include("django.contrib.auth.urls")), #built in log out and log in etc
+    path('', include("django.contrib.auth.urls")),
+    path('/', n.newsletter, name = "base" ),
 ]
 
 if settings.DEBUG: 
