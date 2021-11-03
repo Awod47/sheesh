@@ -3,6 +3,8 @@
 
 <html lang="en">
 {% load static %}
+{% load crispy_forms_filters %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"> 
 
 </head>
-<body>
+<body style="min-height: 100%;">
 <header>
 
     <a href="/" class="logo"><i class="S"></i>SHISH</a>
@@ -65,7 +67,16 @@
 {% block content %}
 
 {% endblock %}
-<section class="footer" style="background: #BDBDBD;">
+
+<h1 style="margin-top: 140px; margin-left: 20px">Subscribe to our Newsletter!</h1>       <!--rendering -->
+<form method= "POST" class= "form-group" style="margin-top: 40px; margin-left: 20px">   
+    {% csrf_token %}
+    {{ form|crispy }}                                                                   <!--not rendering -->
+    <button type= "submit" class= "btn btn-success">Subscribe</button>                  <!--rendering -->
+</form> 
+
+
+<section class="footer" style="background: #BDBDBD; position: fixed; bottom:0 ; width: 100%;">
 
     <div class="box-container">
 
