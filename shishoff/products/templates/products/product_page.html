@@ -11,8 +11,11 @@
       <div class="card-body">
         <h5 class="card-title">{{ product.Title }}</h5>
         <p class="card-text">{{ product.Description }}</p>
-        <p class="card-text">Price - {{ product.Price }}</p>
-        <a href="<int:id>" class="btn btn-primary">Buy Now</a>
+        <p class="card-text">Price - {{ product.Price }}</p> 
+        <hr>
+        <button href="/cart" class="btn btn-outline-secondary">Add to cart</button>
+        <a class=" btn btn-outline-success" href="#">View</a>
+        
       </div>
     </div>
 {% endfor %}
