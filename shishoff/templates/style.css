@@ -179,6 +179,7 @@ header .icons #menu-bars{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap:1.5rem;
+    position: relative;
 }
 
 .footer .box-container .box h3{

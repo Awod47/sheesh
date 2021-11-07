@@ -4,12 +4,12 @@
 <html lang="en">
 {% load static %}
 {% load crispy_forms_filters %}
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
@@ -18,41 +18,50 @@
 
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   
    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
     <title>SHISH</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+
     <!-- custom css file link  -->
-    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> 
 
 </head>
 <body style="min-height: 100%;">
 <header>
 
-    <a href="/" class="logo"><i class="S"></i>SHISH</a>
+    <a href="/" class="logo" style="text-decoration:none"><i class="S"></i>SHISH</a>
 
     <nav class="navbar">
-        <a class="active" href="/">home</a>
-        <a href="/">about</a>
-        <a href="/products">products</a>
-        <a href="/">review</a>
-        <a href="/">blog</a>
-        <a href="/register">Register</a>
-        <a href="/newsletter">Newsletter</a>
+        <a class="active" href="/" style="text-decoration:none">home</a>
+        <a href="/" style="text-decoration:none">about</a>
+        <a href="/products" style="text-decoration:none">products</a>
+        <a href="/" style="text-decoration:none">review</a>
+        <a href="/" style="text-decoration:none">blog</a>
+        <a href="/register" style="text-decoration:none">Register</a>
+        <a href="/newsletter" style="text-decoration:none">Newsletter</a>
     </nav>
 
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <i class="fas fa-search" id="search-icon"></i>
-        <a href="/" class="fas fa-heart"></a>
-        <a href="/cart" class="fas fa-shopping-cart"></a>
+        <a href="/" class="fas fa-heart" style="text-decoration:none"></a>
+        <a href="/cart" class="fas fa-shopping-cart" style="text-decoration:none"></a>
     </div>
 
 </header>
@@ -63,63 +72,121 @@
     <i class="fas fa-times" id="close"></i>
 </form>
 
-
 {% block content %}
 
 {% endblock %}
 
-<section class="footer" style="background: #BDBDBD; position: relative; bottom:0 ; width: 100%;">
 
-    <div class="box-container">
-
-        <div class="box">
-            <h3>locations</h3>
-            <a href="/">india</a>
+<!--footer section-->
+<footer>
+    <div class="footer-wrap" > <!-- style="position: relative; -->
+    <div class="container first_class">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+            <p>Get all the latest information on  Shish,
+               Sign up for our newsletter today.</p>
+          </div>
+          <div class="col-md-4 col-sm-6">
+          <div class="col-md-12">
+            <div class="standard_social_links">
+          <div>
+            <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+  
+            </li>
+            <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+  
+            </li>
+            <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  
+            </li>
+            <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+  
+            </li>
+            <li class="round-btn btn-whatsapp"><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+  
+            </li>
+            <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+            </li>
+          </div>
+        </div>  
+          </div>
+            <div class="clearfix"></div>
+          <div class="col-md-12"><h3 style="text-align: right;">Stay Connected</h3></div>
+          </div>
         </div>
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="/">home</a>
-            <a href="/">about</a>
-            <a href="/products">products</a>
-            <a href="/">review</a>
-            <a href="/">blog</a>
-        </div>
-
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="/">+197388278260</a>
-            <a href="/">+632781627393</a>
-            <a href="/">aprakash@gmail.com</a>
-            <a href="/">bangalore, karnataka , india</a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="/">facebook</a>
-            <a href="/">twitter</a>
-            <a href="/">instagram</a>
-            <a href="/">linkedin</a>
-        </div>
-
     </div>
-
-    <div class= "newsletter">
-        <a class="newsletter-link" href="/newsletter"  style="font-size: 2.7rem;"> Subscribe to our Newsletter!</a>
+      <div class="second_class">
+        <div class="container second_class_bdr">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+  
+            <div class="footer-logo"><img src="http://localhost/lrn/img/footer_logo.png" alt="logo">
+            </div>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <h3>Quick  LInks</h3>
+            <ul class="footer-links">
+              <li><a href="#">Home</a>
+              </li>
+              <li><a href="#">About us</a>
+              </li>
+              <li><a href="#">Products</a>
+              </li>
+              <li><a href="#">Contact Us</a>
+              </li>
+              <li><a href="#" target="_blank">Terms &amp; Conditions</a>
+              </li>
+              <li><a href="#" target="_blank">Privacy Policy</a>
+              </li>
+              <li><a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h3>OUR SERVICES</h3>
+            <ul class="footer-category">
+              <li><a href="#">nifshsi</a>
+              </li>
+              <li><a href="#">nfihsf &amp; jifsayfn </a>
+              </li>
+              <li><a href="#">fhuieraon</a>
+              </li>
+              <li><a href="#">uierpwbg</a>
+              </li>
+              <li><a href="#">nguirwp</a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+      
+      <div class="row">
+        
+        <div class="container-fluid">
+        <div class="copyright"> Copyright | All Rights Reserved by Shishters Pvt. Ltd.</div>
+        </div>
+        
+      </div>
     </div>
+    
+    </footer>
 
-    <div class="credit"> copyright @2021 by <span>SHISHters</span> </div>
-
-
-</section>
-
+<!--
 <div class="loader-container">  
     <img src="{% static 'medias/loading_screen.gif' %}" alt="https://images.app.goo.gl/vYKRW7oC7Y4ir2BP8">
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+--> 
+
 <!-- custom js file link  -->
-<script src="{% static '/js/loading_scr.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 
 </body>
 </html>
