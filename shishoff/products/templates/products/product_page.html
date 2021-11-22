@@ -13,7 +13,7 @@
         <p class="card-text">{{ product.description }}</p>
         <p class="card-text">Price - {{ product.price|floatformat:2 }}</p> 
         <hr>
-        <button href="/cart" class="btn btn-outline-secondary">Add to cart</button>
+        <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to cart</button>
         <a class=" btn btn-outline-success" href="#">View</a>
         
       </div>

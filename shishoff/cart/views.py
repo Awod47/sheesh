@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import * 
 
-
+#CART.JS
 # Create your views here.
 def the_cart(request):
 	if request.user.is_authenticated:
@@ -12,6 +12,7 @@ def the_cart(request):
 		order, created= Order.objects.get_or_create(customer= customer, complete= False)
 		#use the object 'order' not class 'order'
 		items= order.orderitem_set.all()
+			
 	else: 
 		items= []
 		#fix for logout

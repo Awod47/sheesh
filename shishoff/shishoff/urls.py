@@ -26,7 +26,7 @@ urlpatterns = [
     path('', include('updates.urls')),
     path('', include('products.urls')),
     path('', include("django.contrib.auth.urls")),
-    path('newsletter/', n.newsletter, name = "newsletter" ),
+    path('', include('newsletter.urls')),
     path('', include('cart.urls')),
 ]
 
