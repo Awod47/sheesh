@@ -21,6 +21,14 @@ class Order(models.Model):
 		return str(self.id)
 
 	@property
+	def shipping(self):
+		shipping = True
+		orderitems = self.orderitem_set.all()
+		for i in orderitems:
+			shipping = True
+		return shipping
+
+	@property
 	#Total cart value, that's why for loop! :D (which is why created get_total first)
 	def get_cart_total(self):
 		orderitems= self.orderitem_set.all()
